@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moatasem Sheha - Digital Card</title>
+<title>Moatasem Sheha - Executive Digital Card</title>
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -14,28 +14,81 @@ body {
     align-items:center;
     justify-content:center;
 }
+
 .card {
-    background: rgba(255,255,255,0.95);
+    background: rgba(255,255,255,0.96);
     backdrop-filter: blur(10px);
     padding:40px;
-    border-radius:20px;
+    border-radius:22px;
     text-align:center;
-    width:340px;
-    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+    width:360px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.25);
+    animation: fadeUp 0.8s ease;
 }
+
+@keyframes fadeUp {
+    from {
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* decorative profile area */
+.profile-box {
+    width:120px;
+    height:120px;
+    margin:0 auto 20px;
+    border-radius:20px;
+    background:
+      linear-gradient(135deg, rgba(44,83,100,0.08), rgba(15,32,39,0.04)),
+      repeating-linear-gradient(
+        45deg,
+        rgba(0,119,181,0.06),
+        rgba(0,119,181,0.06) 6px,
+        transparent 6px,
+        transparent 12px
+      );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(0,0,0,0.05);
+}
+
+.profile-box img {
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #fff;
+    box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
 h1 {
     margin:0;
     font-size:28px;
 }
-h2 {
+
+.role {
     font-size:15px;
-    font-weight:normal;
-    margin-top:8px;
     color:#555;
+    margin:4px 0; /* قللنا المسافات */
+    line-height:1.35;
 }
+
+.tagline {
+    margin-top:14px;
+    font-size:13px;
+    color:#666;
+    font-style:italic;
+}
+
 .btn {
     display:block;
-    margin-top:15px;
+    margin-top:14px;
     padding:14px;
     text-decoration:none;
     border-radius:12px;
@@ -43,10 +96,12 @@ h2 {
     color:white;
     transition:0.3s ease;
 }
+
 .btn:hover {
-    transform: translateY(-2px);
+    transform:translateY(-2px);
     box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
+
 .save { background:#34495e; }
 .call { background:#27ae60; }
 .whatsapp { background:#25D366; }
@@ -56,16 +111,24 @@ h2 {
     margin-top:20px;
     font-size:12px;
     color:#777;
-    line-height:1.6;
 }
 </style>
 </head>
 <body>
 <div class="card">
+
+    <div class="profile-box">
+        <img src="profile.jpg" alt="Moatasem Sheha">
+    </div>
+
     <h1>Moatasem Sheha</h1>
-    <h2>Chartered Accountant</h2>
-    <h2>Chief Financial Officer - Nova HR</h2>
-    <h2>Financial Consultant - SAMA College</h2>
+    <div class="role">Chartered Accountant</div>
+    <div class="role">Chief Financial Officer - Nova HR</div>
+    <div class="role">Financial Consultant - SAMA College</div>
+
+    <div class="tagline">
+        Let’s connect for finance, ERP & strategic growth.
+    </div>
 
     <a class="btn save" href="contact.vcf">💾 Save Contact</a>
     <a class="btn call" href="tel:+201055000221">📞 Call</a>
@@ -75,6 +138,7 @@ h2 {
     <div class="footer">
         Scan the QR code and save my contact instantly.
     </div>
+
 </div>
 </body>
 </html>
