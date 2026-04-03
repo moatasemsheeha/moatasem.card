@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Moatasem Sheha - Executive Digital Card</title>
+
+<!-- خط أنيق للاسم -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -27,24 +31,18 @@ body {
 }
 
 @keyframes fadeUp {
-    from {
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to {
-        opacity:1;
-        transform:translateY(0);
-    }
+    from { opacity:0; transform:translateY(30px); }
+    to { opacity:1; transform:translateY(0); }
 }
 
-/* decorative profile area */
+/* Profile Image */
 .profile-box {
     margin:0 auto 20px;
     display:flex;
     align-items:center;
     justify-content:center;
 }
-    
+
 .profile-box img {
     width:90px;
     height:90px;
@@ -54,18 +52,31 @@ body {
     box-shadow:0 6px 18px rgba(0,0,0,0.15);
 }
 
+/* الاسم بخط مميز */
 h1 {
     margin:0;
-    font-size:28px;
+    font-size:30px;
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    letter-spacing:0.5px;
+    color:#1f2937;
+    animation: nameGlow 1.2s ease;
 }
 
+@keyframes nameGlow {
+    from { opacity:0; transform:translateY(10px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+/* الوظائف */
 .role {
     font-size:15px;
     color:#555;
-    margin:4px 0; /* قللنا المسافات */
+    margin:4px 0; 
     line-height:1.35;
 }
 
+/* شعار أو tagline */
 .tagline {
     margin-top:14px;
     font-size:13px;
@@ -73,6 +84,7 @@ h1 {
     font-style:italic;
 }
 
+/* أزرار */
 .btn {
     display:block;
     margin-top:14px;
@@ -89,11 +101,13 @@ h1 {
     box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
-.save { background:#34495e; }
+/* ألوان الأزرار */
+.save { background:#c9a227; }      /* ذهبي لإبراز زرار Add Contact */
 .call { background:#27ae60; }
 .whatsapp { background:#25D366; }
 .linkedin { background:#0077b5; }
 
+/* Footer */
 .footer {
     margin-top:20px;
     font-size:12px;
@@ -104,20 +118,28 @@ h1 {
 <body>
 <div class="card">
 
+    <!-- الصورة -->
     <div class="profile-box">
         <img src="profile.jpg" alt="Moatasem Sheha">
     </div>
 
-    <h1>Moatasem Sheha</h1>
+    <!-- الاسم مع DipIFR -->
+    <h1>Moatasem Sheha, DipIFR</h1>
+
+    <!-- الوظائف -->
     <div class="role">Chartered Accountant</div>
     <div class="role">Chief Financial Officer - Nova HR</div>
     <div class="role">Financial Consultant - SAMA College</div>
 
+    <!-- شعار أو tagline -->
     <div class="tagline">
         Let’s connect for finance, ERP & strategic growth.
     </div>
 
-    <a class="btn save" href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:Moatasem%20Sheha%0ATITLE:Chief%20Financial%20Officer%20-%20Nova%20HR%0AORG:Nova%20HR%0ATEL;TYPE=CELL:+201055000221%0AURL:https://www.linkedin.com/in/moatasem-sheeha%0ANOTE:Chartered%20Accountant%20|%20Financial%20Consultant%20-%20SAMA%20College%0AEND:VCARD">👤 Add Me to Contacts</a>
+    <!-- الأزرار -->
+    <a class="btn save" href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:Moatasem%20Sheha%0ATITLE:Chief%20Financial%20Officer%20-%20Nova%20HR%0AORG:Nova%20HR%0ATEL;TYPE=CELL:+201055000221%0AURL:https://www.linkedin.com/in/moatasem-sheeha%0ANOTE:Chartered%20Accountant%20|%20Financial%20Consultant%20-%20SAMA%20College%0AEND:VCARD">
+        + Add Me to Contacts
+    </a>
     <a class="btn call" href="tel:+201055000221">📞 Call</a>
     <a class="btn whatsapp" href="https://wa.me/201055000221">💬 WhatsApp</a>
     <a class="btn linkedin" href="https://www.linkedin.com/in/moatasem-sheeha">🔗 LinkedIn</a>
